@@ -1,13 +1,278 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  border: none;
+}
+.navbar{
+  display: flex;
+  background-color:  rgb(65, 59, 59);
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.navbar h1 {
+  margin-left: 25px;
+  padding: 2px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar .nav_links{
+  margin-left: 24px;
+  margin-top: 40px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
 }
+.navbar .nav_links:hover{
+  color: aqua;
+}
+.nav_links{
+  margin-left: 14px;
+  margin-top: 30px;
+}
+.icon {
+  vertical-align: middle;
+  font-size: 1.0em;
+  margin-bottom: -0.1em;
+  padding: 2px;
+}
+
+/* DropDown Css For STudents */
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {background-color: aqua}
+
+.nav_links:hover + .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu:hover {
+  display: block;
+}
+
+/* LOGIN CSS */
+.Wrapper  {
+  position: relative;
+  width: 35%;
+  height: 70vh;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .1);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  border-radius: 10px;
+  color: #332626;
+  display: flex;
+  align-items: center;
+  overflow: hidden;   
+  transition: height .2s ease;
+  margin-top: 35px;
+  top: 12%;
+  left: 30%;
+  /* Revist */
+  overflow: hidden;                   
+  
+
+}
+.Wrapper .active {
+  height: 520px;
+}
+
+.Wrapper .form-box {
+ width: 100%;
+ padding: 40px;
+}
+
+
+
+form h1 {
+  font-size: 36px;
+  text-align: center;
+}
+form .input-box{
+   position: relative;
+   width: 100%;
+   height: 50px;
+   margin: 30px 0;
+   
+
+}
+.input-box input {
+  width: 80%;
+  height: 20%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(207, 20, 20, 0.1);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #252222;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input ::placeholder {
+  color: #fff;
+}
+
+.input-box .icon{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  translate: 0 -50%;
+  font-size: 16px;
+}
+
+form .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+
+}
+
+.remember-forgot label input {
+  accent-color: #fff;
+  margin: 4px;
+}
+
+.remember-forgot a {
+  color: #272525;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+form button {
+  width: 100%;
+  height: 45px;
+  background: #a09292;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
+}
+form button:hover {
+  background: #cebfbf;
+}
+form .register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+.register-link p a {
+  color: #221f1f;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-link p a:hover {
+  text-decoration: underline;
+}
+/* Table Container Styles */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+.table-border {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Table Header Styles */
+.table-border thead tr {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-border thead tr th {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Table Body Styles */
+.table-border tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.table-border tbody tr td {
+  padding: 10px;
+}
+
+/* Table Body Hover Styles */
+.table-border tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Table Action Column Styles */
+.action-column {
+  text-align: center;
+}
+
+/* Action Column Styles */
+.action-column {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Edit Button Styles */
+.edit-button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #3e8e41;
+}
+
+/* Delete Button Styles */
+.delete-button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+
+
+
+
