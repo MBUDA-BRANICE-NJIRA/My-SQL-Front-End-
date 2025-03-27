@@ -7,11 +7,11 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function StudentsList() {
   const [students, setStudents] = useState([]);
-  const [refresh, setRefresh] = useState(false); // 👈 Add refresh state
+  //const [refresh, setRefresh] = useState(false); // 👈 Add refresh state
 
   useEffect(() => {
     fetchStudents();
-  }, [refresh]); // 👈 Fetch students when refresh changes
+  }, []); // 👈 Fetch students when refresh changes
 
   const fetchStudents = async () => {
     const token = localStorage.getItem("token");
